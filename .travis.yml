@@ -4,7 +4,7 @@ services:
 
 before_install:
   - docker build -t crmessin/docker-react -f Dockerfile.dev .
-
+##Using -e to exit when done
 script:
   - docker run -e CI=true crmessin/docker-react npm run test -- --coverage
 
